@@ -286,6 +286,7 @@ class RPSWeb < Sinatra::Application
     end
 
     def add_player(player)
+        Player.players
       id = player.object_id
       Player.add(id, player)
       session[:player_id] = id
